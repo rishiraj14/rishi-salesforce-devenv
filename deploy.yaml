@@ -15,16 +15,16 @@ metadata:
   name: rishi-app
   namespace: rishi-dev-ns
 spec:
-  replicas: 5 # Adding replica of pods
+  replicas: 3
   selector:
     matchLabels:
       app: rishi-app
   strategy: {}
-  template: # tempalte of pods 
+  template:
     metadata:
       creationTimestamp: null
       labels:
-        app: rishi-app # label of pods 
+        app: rishi-app
     spec:
       containers:
       - image: dockerashu/ashumobiwebapp:6
@@ -33,6 +33,7 @@ spec:
         - containerPort: 80
         resources: {}
 status: {}
+
 ---
 apiVersion: v1
 kind: Service
@@ -48,8 +49,9 @@ spec:
     port: 1234
     protocol: TCP
     targetPort: 80
-  selector: # is finding pod using pod labels to create Endpoints 
-    app: ashusvc1 # exact label of pods 
+  selector:
+    app: ashusvc1
   type: NodePort
 status:
   loadBalancer: {}
+
