@@ -33,7 +33,6 @@ spec:
         - containerPort: 80
         resources: {}
 status: {}
-
 ---
 apiVersion: v1
 kind: Service
