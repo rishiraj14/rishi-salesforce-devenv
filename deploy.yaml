@@ -49,7 +49,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector: # is finding pod using pod labels to create Endpoints 
-    app: ashusvc1
+    app: ashusvc1 # exact label of pods 
   type: NodePort
 status:
   loadBalancer: {}
