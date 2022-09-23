@@ -50,7 +50,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    app: ashusvc1
+    app: rishi-app
   type: NodePort
 status:
   loadBalancer: {}
