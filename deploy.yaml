@@ -15,7 +15,7 @@ metadata:
   name: rishi-app
   namespace: rishi-dev-ns
 spec:
-  replicas: 3
+  replicas: 5 # Adding replica of pods
   selector:
     matchLabels:
       app: rishi-app
